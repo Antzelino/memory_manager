@@ -2,3 +2,6 @@
 /build
 /.vscode
 /build
+build/runner
+data.db.BACKUP
+data.db
