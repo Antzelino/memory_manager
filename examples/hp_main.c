@@ -64,7 +64,7 @@ const char* cities[] = {
 
 void TestFileScan(int fileDesc, int records_num) {
   Record record;
-  // printf("id,name,surname,city\n");
+  printf("id,name,surname,city\n");
   for (int j = 1; j <= 500; ++j) {
     for (int id = 1; id <= records_num; ++id) {
       CALL_OR_DIE(HP_GetEntry(fileDesc, id, &record));
@@ -108,8 +108,8 @@ int main() {
 
   printf("Get Entry with rowid 1000\n");
   CALL_OR_DIE(HP_GetEntry(fd, 1000, &record));
-  // printf("%d,\"%s\",\"%s\",\"%s\"\n",
-  // record.id, record.name, record.surname, record.city);
+  printf("%d,\"%s\",\"%s\",\"%s\"\n",
+  record.id, record.name, record.surname, record.city);
 
   CALL_OR_DIE(HP_CloseFile(fd));
   BF_Close();
